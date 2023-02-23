@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+  titulo:string="";
+
   constructor() { }
 
   ngOnInit(): void {
+    this.titulo="Nuevo Usuario";
   }
 
 }

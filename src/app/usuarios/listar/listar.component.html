@@ -1,1 +1,69 @@
-<h1>Listar</h1>
+<h1 class="text-center mb-3">Lista de Usuarios</h1>
+
+<div class="container">
+    <table class="table table-striped text-center">
+        <thead>
+            <tr>
+                <th>
+                    Nombres
+                </th>
+    
+                <th>
+                    Apellidos
+                </th>
+    
+                <th>
+                    Correo
+                </th>
+    
+                <th>
+                    Dirección
+                </th>
+
+                <th>
+                    Acciones
+                </th>
+            </tr>
+    
+        </thead>
+    
+        <tbody>
+    
+            <tr *ngFor="let usuario of usuarios">
+    
+                <td>
+                    {{usuario.nombres}}
+                </td>
+    
+                <td>
+                    {{usuario.apellidos}}
+                </td>
+    
+                
+                <td>
+                    {{usuario.correo}}
+                </td>
+    
+                <td>
+                    {{usuario.direccion?.callePrincipal}} / {{usuario.direccion?.calleSecundaria}}
+                </td>
+
+                <td>
+                    <button class="btn btn-primary">
+                        <span class="fas fa-user-pen"></span>
+                    </button>
+
+                    <button class="btn btn-danger">
+                        <span class="fas fa-user-xmark"></span>
+                    </button>
+                </td>
+    
+            </tr>
+    
+        </tbody>
+    
+    </table>
+
+</div>
+
+

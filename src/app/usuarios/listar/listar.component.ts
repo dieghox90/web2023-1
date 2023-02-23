@@ -17,7 +17,6 @@ export class ListarComponent implements OnInit {
 
     this.service.getUsuarios().subscribe(users =>{
       this.usuarios=users;
-      console.log(users);
     });
   }
 
